@@ -49,7 +49,7 @@ const Steps = () => {
                 {stepsData.map((step, index) => (
                     <div   data-aos="fade-down"
                     data-aos-easing="ease-in-out" key={index}>
-                        <div className="flex flex-col p-8 space-y-4  dark:bg-gray-50 border-t-4 border-[#403c3c]">
+                        <div className="flex flex-col p-8 space-y-4 border-t-4 border-[#403c3c]">
                             <div className="text-5xl font-extrabold  text-secondary ">{step.name}</div>
                             <h1 className='text-3xl font-extrabold text-main' >
                                 {step.description}
