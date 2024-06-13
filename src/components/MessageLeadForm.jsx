@@ -4,7 +4,7 @@ const MessageLeadForm = () => {
     const [formData, setFormData] = useState({
         name: '',
         phone: '',
-        subject: 'עריכת וידאו',
+        subject: 'שיווק דיגיטלי',
         otherMessage: '' // Ensure this state is initialized if it's being used
     });
     const [errors, setErrors] = useState({});
@@ -26,7 +26,7 @@ const MessageLeadForm = () => {
             setIsSubmitting(true);
 
             try {
-                const response = await fetch("https://getform.io/f/nbdorkga", {
+                const response = await fetch("https://getform.io/f/panvmeva", {
                     method: 'POST',
                     body: JSON.stringify(formData),
                     headers: {
@@ -37,7 +37,7 @@ const MessageLeadForm = () => {
                     setFormData({
                         name: '',
                         phone: '',
-                        subject: '',
+                        subject: 'שיווק דיגיטלי',
                         otherMessage: ''
                     });
                     setErrors({});
@@ -64,15 +64,15 @@ const MessageLeadForm = () => {
     };
 
     return (
-        <div className='mx-4'>
+        <div className=''>
             <div data-aos="zoom-in"
-                data-aos-easing="ease-in-out" className="mx-auto px-8 py-10 pb-10 specialBg rounded-xl max-w-[1000px] border-2  border-[#403c3c]  ">
+                data-aos-easing="ease-in-out" className="mx-auto px-4 py-10 pb-10 specialBg rounded-xl max-w-[1000px] border-2  border-[#403c3c]  ">
 
                 <div>
                     <div className='mb-8'>
-                        <h1 dir='rtl' className="text-center text-lg md:text-2xl font-extrabold text-main">
+                        {/* <h1 dir='rtl' className="text-center text-lg md:text-2xl font-extrabold text-main">
                             בואו נערוך את הסרטון הבא שלכם
-                        </h1>
+                        </h1> */}
                         <h2 className="text-center text-3xl md:text-5xl font-extrabold text-secondary">
                             השאירו פרטים
                         </h2>
@@ -131,10 +131,9 @@ const MessageLeadForm = () => {
                                 onChange={handleSubjectChange}
                                 className="bg-[#403c3c] text-white px-2 py-1 rounded-full text-lg cursor-pointer font-bold"
                             >
-                                <option value="עריכת וידאו">עריכת וידאו</option>
-                                <option value="סרטוני תוכן לסושיאל">סרטוני תוכן לסושיאל</option>
-                                <option value="הפקות ובימוי">הפקות ובימוי</option>
-                                <option value="סרטוני אווירה">סרטוני אווירה</option>
+                                <option value="שיווק דיגיטלי">שיווק דיגיטלי</option>
+                                <option value="סרטוני תוכן">סרטוני תוכן </option>
+                                <option value="אתרים ודפי נחיתה">אתרים ודפי נחיתה</option>
                                 <option value="אחר">אחר</option>
                             </select>
                         </div>
@@ -145,7 +144,7 @@ const MessageLeadForm = () => {
                                 value={formData.otherMessage}
                                 onChange={(e) => setFormData({ ...formData, otherMessage: e.target.value })}
                                 className="bg-transparent rounded-2xl border-2 border-[#403c3c] p-2 text-main focus:border-[#403c3c] focus:outline-none w-full max-h-32 h-32 "
-                                placeholder="פרט על הפרוייקט/העבודה שאתה מעוניין בה.."
+                                placeholder="ספר/י על סוג העסק שלך והאם עשית שיווק דיגיטלי בעבר..."
                             />
                         </div>
 
